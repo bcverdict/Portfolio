@@ -5,17 +5,20 @@ import { ProjectData } from '../../types/projectData';
 
 const parsedProjectData: ProjectData = yaml.load(projectData) as ProjectData;
 
-const createImagePath = (id: number): string => {
-    return parsedProjectData.projectPrefix+id+parsedProjectData.projectSuffix+"."+parsedProjectData.imageType;
+const generalPath = (id: number): string => {
+    return parsedProjectData.projectPrefix+id+parsedProjectData.projectSuffix+".";
+}
+const imagePath = (id: number): string => {
+    return generalPath(id)+parsedProjectData.imageType;
 }
 
-const createAnimPath = (id: number): string => {
-    return parsedProjectData.projectPrefix+id+parsedProjectData.projectSuffix+"."+parsedProjectData.animType;
+const animPath = (id: number): string => {
+    return generalPath(id)+parsedProjectData.animType;
 }
 
 const MyProjectDataWrapper: ProjectDataWrapper = {
-    getImagePath: (id: number): string => createImagePath(id),
-    getGifPath: (id: number): string => createAnimPath(id),
+    getImagePath: (id: number): string => imagePath(id),
+    getGifPath: (id: number): string => animPath(id),
     getProjectDescription: (id: number): string => parsedProjectData.projects[id] || "Description not found",
     numberOfProjects: (): number => Object.keys(parsedProjectData.projects).length
 };

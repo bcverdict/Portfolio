@@ -1,0 +1,3 @@
+HeaderDataWrapperLocation: "../HeaderDataWrapper/MyHeaderDataWrapper"
+NavbarDataWrapperLocation: "../NavbarDataWrapper/MyNavbarDataWrapper"
+ProjectDataWrapperLocation: "../ProjectDataWrapper/MyProjectDataWrapper"

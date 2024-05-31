@@ -1,13 +1,11 @@
-import './App.css';
-import DependencyManager from "./DependencyManager/DependencyManager";
+import './Page.css'
+import DependencyManager from "../DependencyManager/DependencyManager";
 
-function App() {
+function Projects() {
     const dependencyManager = DependencyManager();
-    let HeaderContent = dependencyManager.EmptyElement;
     let ProjectsContent = dependencyManager.EmptyElement;
 
     try {
-        HeaderContent = dependencyManager.HeaderElement;
         ProjectsContent = dependencyManager.ProjectCardListElement;
     } catch (err) {
         if(err instanceof dependencyManager.AppError) {
@@ -16,15 +14,11 @@ function App() {
             console.error(err);
         }
     }
-
     return (
-        <div className="App">
-            <header className="App-header">
-                {HeaderContent}
-                {ProjectsContent}
-            </header>
+        <div className={"Page"}>
+            {ProjectsContent}
         </div>
     );
 }
 
-export default App;
+export default Projects;

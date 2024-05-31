@@ -1,7 +1,14 @@
 import React, {useState} from "react";
 import './ProjectCard.css';
 
-function ProjectCard(projectDescription : string, id : number, gifPath : string, imagePath : string) : JSX.Element {
+interface ProjectCardProps {
+    id: number;
+    description: string;
+    gifPath: string;
+    imagePath: string;
+}
+
+const ProjectCard: React.FC<ProjectCardProps> = ({ id, description, gifPath, imagePath }) => {
 
     const [isHovering, setIsHovering] = useState(false);
 
@@ -20,7 +27,7 @@ function ProjectCard(projectDescription : string, id : number, gifPath : string,
             onMouseLeave={handleMouseLeave}
         >
             <div className={"project-description"}>
-                <p>{projectDescription}</p>
+                <p>{description}</p>
             </div>
             <div className={"project-preview"}>
                 {
