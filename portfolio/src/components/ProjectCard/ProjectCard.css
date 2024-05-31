@@ -1,0 +1,20 @@
+#project-card {
+    border: 2px solid #efefef; /* Green border */
+    border-radius: 15px; /* Rounded corners */
+    padding: 20px; /* Padding inside the border */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    transition: box-shadow 0.3s ease; /* Smooth transition for hover effect */
+}
+
+#project-card:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
+}
+
+.project-description p {
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.project-image {
+    border-radius: 15px;
+}

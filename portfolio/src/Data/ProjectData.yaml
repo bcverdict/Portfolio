@@ -1,0 +1,6 @@
+projectPrefix: "./media/projectPreviews/project-"
+projectSuffix: "/preview"
+imageType: "jpg"
+animType: "gif"
+projects:
+  0: "Project 1"
