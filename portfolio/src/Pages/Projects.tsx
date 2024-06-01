@@ -1,14 +1,14 @@
 import './Page.css'
-import DependencyManager from "../DependencyManager/DependencyManager";
+import {ElementFactory} from "../Factories/ElementFactory";
+import AppError from "../Errors/AppError";
 
-function Projects() {
-    const dependencyManager = DependencyManager();
-    let ProjectsContent = dependencyManager.EmptyElement;
+const Projects = async () => {
+    let ProjectsContent = ElementFactory.CreateEmptyElement();
 
     try {
-        ProjectsContent = dependencyManager.ProjectCardListElement;
+        ProjectsContent = await ElementFactory.CreateProjectCardListElement();
     } catch (err) {
-        if(err instanceof dependencyManager.AppError) {
+        if(err instanceof AppError) {
             console.error(err.message);
         } else {
             console.error(err);

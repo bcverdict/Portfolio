@@ -5,37 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a5a93d6b-bdca-4fab-a858-2ffa6e19d68c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/portfolio/src/Data/HeaderData.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/portfolio/src/Data/NavbarData.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/portfolio/src/Data/config.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/portfolio/src/DependencyManager/DependencyManager.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/portfolio/src/Errors/AppError.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/portfolio/src/Errors/NullDataWrapperError.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/portfolio/src/Pages/Page.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/portfolio/src/Pages/Projects.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/portfolio/src/Wrappers/ConfigDataWrapper/ConfigDataWrapper.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/portfolio/src/Wrappers/ConfigDataWrapper/MyConfigDataWrapper.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/portfolio/src/Wrappers/HeaderDataWrapper/HeaderDataWrapper.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/portfolio/src/Wrappers/HeaderDataWrapper/MyHeaderDataWrapper.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/portfolio/src/Wrappers/HeaderDataWrapper/NullHeaderDataWrapper.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/portfolio/src/Wrappers/NavbarDataWrapper/MyNavbarDataWrapper.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/portfolio/src/Wrappers/NavbarDataWrapper/NavbarDataWrapper.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/portfolio/src/Wrappers/NavbarDataWrapper/NullNavbarDataWrapper.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/portfolio/src/Wrappers/ProjectDataWrapper/NullProjectDataWrapper.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/portfolio/src/components/Header/Header.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/portfolio/src/components/Header/Header.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/portfolio/src/components/Navbar/Navbar.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/portfolio/src/components/Navbar/Navbar.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/portfolio/src/types/configData.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/portfolio/src/types/headerData.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/portfolio/src/types/narvarData.d.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/portfolio/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/src/App.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/portfolio/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/src/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/portfolio/src/Wrappers/ProjectDataWrapper/MyProjectDataWrapper.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/src/Wrappers/ProjectDataWrapper/MyProjectDataWrapper.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/portfolio/src/components/ProjectCard/ProjectCard.css" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/src/components/ProjectCard/ProjectCard.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/portfolio/src/components/ProjectCard/ProjectCard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/src/components/ProjectCard/ProjectCard.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/portfolio/src/components/ProjectCardList/ProjectCardList.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/src/components/ProjectCardList/ProjectCardList.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portfolio/src/DependencyManager/DependencyManager.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/src/Factories/ElementFactory.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portfolio/src/Pages/Projects.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/src/Pages/Projects.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portfolio/src/Wrappers/ConfigDataWrapper/ConfigDataWrapper.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/src/Wrappers/ConfigDataWrapper/ConfigDataWrapper.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portfolio/src/Wrappers/ConfigDataWrapper/MyConfigDataWrapper.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/src/Wrappers/ConfigDataWrapper/MyConfigDataWrapper.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -92,7 +67,7 @@
       <recent name="C:\Users\Nick\Documents\WebStormProjects\portfolio\portfolio\src\media\projectPreviews\project-0" />
     </key>
   </component>
-  <component name="RunManager" selected="npm.start">
+  <component name="RunManager" selected="JavaScript Debug.Debug">
     <configuration name="Debug" type="JavascriptDebugType" uri="http://localhost:3000/">
       <method v="2" />
     </configuration>
@@ -119,11 +94,24 @@
       <workItem from="1717110435559" duration="3088000" />
       <workItem from="1717113594127" duration="4980000" />
       <workItem from="1717118644407" duration="16087000" />
-      <workItem from="1717173010836" duration="23548000" />
+      <workItem from="1717173010836" duration="25580000" />
+      <workItem from="1717207534467" duration="1250000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/portfolio/src/components/Navbar/Navbar.tsx</url>
+          <line>4</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

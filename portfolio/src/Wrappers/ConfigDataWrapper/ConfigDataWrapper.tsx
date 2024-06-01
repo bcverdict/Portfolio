@@ -3,7 +3,7 @@ import {NavbarDataWrapper} from "../NavbarDataWrapper/NavbarDataWrapper";
 import {ProjectDataWrapper} from "../ProjectDataWrapper/ProjectDataWrapper";
 
 export interface ConfigDataWrapper {
-    getHeaderDataWrapper(): HeaderDataWrapper;
-    getNavbarDataWrapper(): NavbarDataWrapper;
-    getProjectDataWrapper(): ProjectDataWrapper;
+    getHeaderDataWrapper(): Promise<HeaderDataWrapper>;
+    getNavbarDataWrapper(): Promise<NavbarDataWrapper>;
+    getProjectDataWrapper(): Promise<ProjectDataWrapper>;
 }

@@ -2,62 +2,46 @@ import {ConfigDataWrapper} from "./ConfigDataWrapper";
 import {HeaderDataWrapper} from "../HeaderDataWrapper/HeaderDataWrapper";
 import {NavbarDataWrapper} from "../NavbarDataWrapper/NavbarDataWrapper";
 import {ProjectDataWrapper} from "../ProjectDataWrapper/ProjectDataWrapper";
-import {ConfigData} from "../../types/configData";
-import configData from "../../Data/config.yaml";
 import NullHeaderDataWrapper from "../HeaderDataWrapper/NullHeaderDataWrapper";
-import yaml from "js-yaml";
-import {useEffect, useState} from "react";
 import NullNavbarDataWrapper from "../NavbarDataWrapper/NullNavbarDataWrapper";
 import NullProjectDataWrapper from "../ProjectDataWrapper/NullProjectDataWrapper";
+//import {ConfigData} from "../../types/configData";
+//import configData from "../../Data/config.yaml";
+//import yaml from "js-yaml";
+//const parsedConfigData: ConfigData = yaml.load(configData) as ConfigData;
 
-const parsedConfigData: ConfigData = yaml.load(configData) as ConfigData;
-
-const useHeaderDataWrapper = (): HeaderDataWrapper => {
-    const [headerData, setHeaderData] = useState<HeaderDataWrapper>(NullHeaderDataWrapper);
-
-    useEffect(() => {
-        const fetchHeaderData = async () => {
-            const CustomHeaderDataWrapper = (await import("../HeaderDataWrapper/MyHeaderDataWrapper")).default;
-            setHeaderData(CustomHeaderDataWrapper);
-        };
-        fetchHeaderData();
-    }, []);
-
-    return headerData;
+const fetchHeaderDataWrapper = async (): Promise<HeaderDataWrapper> => {
+    try {
+        return (await import("../HeaderDataWrapper/MyHeaderDataWrapper")).default;
+    } catch (error) {
+        console.error('Error loading HeaderDataWrapper:', error);
+        return NullHeaderDataWrapper;
+    }
 };
 
-const useNavbarDataWrapper = (): NavbarDataWrapper => {
-    const [navbarData, setNavbarData] = useState<NavbarDataWrapper>(NullNavbarDataWrapper);
-
-    useEffect(() => {
-        const fetchNavbarData = async () => {
-            const CustomNavbarDataWrapper: NavbarDataWrapper = (await import("../NavbarDataWrapper/MyNavbarDataWrapper")).default;
-            setNavbarData(CustomNavbarDataWrapper);
-        };
-        fetchNavbarData();
-    }, []);
-
-    return navbarData;
+const fetchNavbarDataWrapper = async (): Promise<NavbarDataWrapper> => {
+    try {
+        return (await import("../NavbarDataWrapper/MyNavbarDataWrapper")).default;
+    } catch (error) {
+        console.error('Error loading NavbarDataWrapper:', error);
+        return NullNavbarDataWrapper;
+    }
 };
 
-const useProjectDataWrapper = (): ProjectDataWrapper => {
-    const [projectData, setProjectData] = useState<ProjectDataWrapper>(NullProjectDataWrapper);
+const fetchProjectDataWrapper = async (): Promise<ProjectDataWrapper> => {
+    try {
+        return (await import("../ProjectDataWrapper/MyProjectDataWrapper")).default;
 
-    useEffect(() => {
-        const fetchProjectData = async () => {
-            const CustomProjectDataWrapper: ProjectDataWrapper = (await import("../ProjectDataWrapper/MyProjectDataWrapper")).default;
-            setProjectData(CustomProjectDataWrapper);
-        };
-        fetchProjectData();
-    }, []);
-
-    return projectData;
+    } catch (error) {
+        console.error('Error loading ProjectDataWrapper:', error);
+        return NullProjectDataWrapper;
+    }
 };
 
 const myConfigDataWrapper: ConfigDataWrapper = {
-    getHeaderDataWrapper: useHeaderDataWrapper,
-    getNavbarDataWrapper: useNavbarDataWrapper,
-    getProjectDataWrapper: useProjectDataWrapper
+    getHeaderDataWrapper: fetchHeaderDataWrapper,
+    getNavbarDataWrapper: fetchNavbarDataWrapper,
+    getProjectDataWrapper: fetchProjectDataWrapper
 };
 
 export default myConfigDataWrapper;
