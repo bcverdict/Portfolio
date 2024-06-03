@@ -1,0 +1,7 @@
+.project-card-list {
+    display: flex;
+    flex-flow: row wrap;
+    gap: 50px;
+    justify-content: center;
+    width: 100%;
+}

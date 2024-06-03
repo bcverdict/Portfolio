@@ -4,3 +4,7 @@ imageType: "jpg"
 animType: "gif"
 projects:
   0: "Project 1"
+  1: "Project 2"
+  2: "Project 3"
+  3: "Project 4"
+  4: "Project 5"

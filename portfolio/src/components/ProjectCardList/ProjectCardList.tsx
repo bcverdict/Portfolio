@@ -1,6 +1,7 @@
 import React from 'react';
 import { ProjectDataWrapper } from "../../Wrappers/ProjectDataWrapper/ProjectDataWrapper";
 import ProjectCard from "../ProjectCard/ProjectCard";
+import './ProjectCardList.css'
 
 interface ProjectCardListProps {
     dataWrapper: ProjectDataWrapper;
@@ -15,7 +16,7 @@ const ProjectCardList: React.FC<ProjectCardListProps> = ({ dataWrapper }) => {
     }));
 
     return (
-        <div>
+        <div className={"project-card-list"}>
             {projects.map(project => (
                 <ProjectCard
                     key={project.id}
