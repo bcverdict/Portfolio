@@ -3,12 +3,9 @@ import {HeaderDataWrapper} from "../Wrappers/HeaderDataWrapper/HeaderDataWrapper
 import {NavbarDataWrapper} from "../Wrappers/NavbarDataWrapper/NavbarDataWrapper";
 import Header from "../components/Header/Header";
 import Navbar from "../components/Navbar/Navbar";
-import NullHeaderDataWrapper from "../Wrappers/HeaderDataWrapper/NullHeaderDataWrapper";
-import NullNavbarDataWrapper from "../Wrappers/NavbarDataWrapper/NullNavbarDataWrapper";
 import {ProjectDataWrapper} from "../Wrappers/ProjectDataWrapper/ProjectDataWrapper";
-import NullProjectDataWrapper from "../Wrappers/ProjectDataWrapper/NullProjectDataWrapper";
 import ProjectCardList from "../components/ProjectCardList/ProjectCardList";
-import MyProjectDataWrapper from "../Wrappers/ProjectDataWrapper/MyProjectDataWrapper";
+import ComponentLoadError from "../Errors/ComponentLoadError";
 
 export class ElementFactory {
 
@@ -17,35 +14,36 @@ export class ElementFactory {
     }
 
     public static async CreateNavbarElement(){
-        const navbarDataWrapper: NavbarDataWrapper = await MyConfigDataWrapper.getNavbarDataWrapper();
+        try {
+            const navbarDataWrapper: NavbarDataWrapper = await MyConfigDataWrapper.getNavbarDataWrapper();
 
-        if(navbarDataWrapper === NullNavbarDataWrapper){
-            ElementFactory.CreateEmptyElement()
+            return Navbar(navbarDataWrapper)
+        } catch (e) {
+            throw new ComponentLoadError("Navbar");
         }
-
-        return Navbar(navbarDataWrapper)
     }
 
     public static async CreateHeaderElement(){
-        const headerDataWrapper: HeaderDataWrapper = await MyConfigDataWrapper.getHeaderDataWrapper();
+        try {
+            const headerDataWrapper: HeaderDataWrapper = await MyConfigDataWrapper.getHeaderDataWrapper();
+            const navbarElement = await ElementFactory.CreateNavbarElement();
 
-        if(headerDataWrapper === NullHeaderDataWrapper){
-            return ElementFactory.CreateEmptyElement();
+            return  Header(headerDataWrapper, navbarElement);
+        } catch (e) {
+            throw new ComponentLoadError("Header");
         }
 
-        const navbarElement = await ElementFactory.CreateNavbarElement();
-        return  Header(headerDataWrapper, navbarElement);
     }
 
     public static async CreateProjectCardListElement(){
-        const projectDataWrapper: ProjectDataWrapper = await MyConfigDataWrapper.getProjectDataWrapper();
+        try {
+            const projectDataWrapper: ProjectDataWrapper = await MyConfigDataWrapper.getProjectDataWrapper();
 
-        if(projectDataWrapper === NullProjectDataWrapper)
-        {
-            return ElementFactory.CreateEmptyElement();
+            return <ProjectCardList dataWrapper={projectDataWrapper}/>;
+        } catch (e) {
+            throw new ComponentLoadError("ProjectDataWrapper");
         }
 
-        return <ProjectCardList dataWrapper={MyProjectDataWrapper}/>;
     }
 }
 

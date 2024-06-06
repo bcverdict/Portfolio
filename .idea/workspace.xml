@@ -5,8 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a5a93d6b-bdca-4fab-a858-2ffa6e19d68c" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/portfolio/src/Errors/ComponentLoadError.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/portfolio/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/src/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portfolio/src/Errors/NullDataWrapperError.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/src/Errors/NullComponentError.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portfolio/src/Factories/ElementFactory.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/src/Factories/ElementFactory.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portfolio/src/Wrappers/ConfigDataWrapper/MyConfigDataWrapper.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/src/Wrappers/ConfigDataWrapper/MyConfigDataWrapper.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portfolio/src/Wrappers/HeaderDataWrapper/NullHeaderDataWrapper.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/portfolio/src/Wrappers/NavbarDataWrapper/NullNavbarDataWrapper.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/portfolio/src/Wrappers/ProjectDataWrapper/NullProjectDataWrapper.tsx" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,24 +48,28 @@
     <option name="showLibraryContents" value="true" />
     <option name="showMembers" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;inlay.hints&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;C:\\Users\\Nick\\Documents\\WebStormProjects\\portfolio\\portfolio\\node_modules\\typescript\\lib&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "master",
+    "last_opened_file_path": "C:/Users/Nick/Documents/WebStormProjects/portfolio/portfolio/src/Errors",
+    "list.type.of.created.stylesheet": "CSS",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "inlay.hints",
+    "ts.external.directory.path": "C:\\Users\\Nick\\Documents\\WebStormProjects\\portfolio\\portfolio\\node_modules\\typescript\\lib",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Nick\Documents\WebStormProjects\portfolio\portfolio\src\Errors" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Nick\Documents\WebStormProjects\portfolio\portfolio\src\Wrappers\FileReaderWrappers" />
       <recent name="C:\Users\Nick\Documents\WebStormProjects\portfolio\portfolio\src\Wrappers\PeojectMediaWrapper" />
@@ -68,7 +78,7 @@
       <recent name="C:\Users\Nick\Documents\WebStormProjects\portfolio\portfolio\src\media\projectPreviews\project-0" />
     </key>
   </component>
-  <component name="RunManager" selected="npm.start">
+  <component name="RunManager" selected="JavaScript Debug.Debug">
     <configuration name="Debug" type="JavascriptDebugType" uri="http://localhost:3000/">
       <method v="2" />
     </configuration>
@@ -100,22 +110,11 @@
       <workItem from="1717354207944" duration="750000" />
       <workItem from="1717456442195" duration="7879000" />
       <workItem from="1717621883381" duration="13546000" />
-      <workItem from="1717701160511" duration="4471000" />
+      <workItem from="1717701160511" duration="5263000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/portfolio/src/Factories/ElementFactory.tsx</url>
-          <line>44</line>
-          <option name="timeStamp" value="20" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>
