@@ -3,6 +3,7 @@ import './App.css';
 import ElementFactory from "./Factories/ElementFactory";
 import AppError from "./Errors/AppError";
 import Projects from "./Pages/Projects";
+import {BrowserRouter, Route, Routes} from "react-router-dom";
 
 const App: React.FC = () => {
     const [headerContent, setHeaderContent] = useState<JSX.Element>(ElementFactory.CreateEmptyElement());
@@ -24,11 +25,26 @@ const App: React.FC = () => {
         fetchElements();
     }, []);
 
+
     return (
         <div className="App">
             <header className="App-header">
-                {headerContent}
-                {Projects()}
+                <BrowserRouter>
+                    <Routes>
+                        <Route path="/" element={
+                            <React.Fragment>
+                                {headerContent}
+                                <Projects/>
+                            </React.Fragment>
+                        }/>
+                        <Route path="projects" element={
+                            <React.Fragment>
+                                {headerContent}
+                                <Projects/>
+                            </React.Fragment>
+                        }/>
+                    </Routes>
+                </BrowserRouter>
             </header>
         </div>
     );

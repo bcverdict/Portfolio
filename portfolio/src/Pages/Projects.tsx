@@ -5,8 +5,6 @@ import {useEffect, useState} from "react";
 
 function Projects() {
     const [projectsContent, setProjectsContent] = useState<JSX.Element>(ElementFactory.CreateEmptyElement());
-    const [error, setError] = useState<string | null>(null);
-
 
     useEffect(() => {
         const fetchElement = async () => {
