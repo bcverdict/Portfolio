@@ -5,14 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a5a93d6b-bdca-4fab-a858-2ffa6e19d68c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/portfolio/src/Errors/ComponentLoadError.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/portfolio/src/Errors/NullDataWrapperError.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/src/Errors/NullComponentError.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/portfolio/src/Factories/ElementFactory.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/src/Factories/ElementFactory.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/portfolio/src/Wrappers/ConfigDataWrapper/MyConfigDataWrapper.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/src/Wrappers/ConfigDataWrapper/MyConfigDataWrapper.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/portfolio/src/Wrappers/HeaderDataWrapper/NullHeaderDataWrapper.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/portfolio/src/Wrappers/NavbarDataWrapper/NullNavbarDataWrapper.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/portfolio/src/Wrappers/ProjectDataWrapper/NullProjectDataWrapper.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/portfolio/src/components/Navbar/Navbar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/src/components/Navbar/Navbar.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -110,7 +104,7 @@
       <workItem from="1717354207944" duration="750000" />
       <workItem from="1717456442195" duration="7879000" />
       <workItem from="1717621883381" duration="13546000" />
-      <workItem from="1717701160511" duration="5263000" />
+      <workItem from="1717701160511" duration="5970000" />
     </task>
     <servers />
   </component>

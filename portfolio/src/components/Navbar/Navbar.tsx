@@ -12,7 +12,7 @@ function Navbar(navbarDataWrapper: NavbarDataWrapper) {
         <nav className="navbar">
             <ul className="navbar-links">
                 {Links.map((LinkObject) => (
-                    <a href={LinkObject.link}>{LinkObject.name}</a>
+                    <a key={LinkObject.id} href={LinkObject.link}>{LinkObject.name}</a>
                 ))}
             </ul>
         </nav>
