@@ -29,20 +29,11 @@ const App: React.FC = () => {
     return (
         <div className="App">
             <header className="App-header">
+                {headerContent}
                 <BrowserRouter>
                     <Routes>
-                        <Route path="/" element={
-                            <React.Fragment>
-                                {headerContent}
-                                <Projects/>
-                            </React.Fragment>
-                        }/>
-                        <Route path="projects" element={
-                            <React.Fragment>
-                                {headerContent}
-                                <Projects/>
-                            </React.Fragment>
-                        }/>
+                        <Route path="/" element={<Projects/>}/>
+                        <Route path="projects" element={<Projects/>}/>
                     </Routes>
                 </BrowserRouter>
             </header>
