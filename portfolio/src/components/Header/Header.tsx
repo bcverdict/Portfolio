@@ -3,7 +3,9 @@ import {HeaderDataWrapper} from "../../Wrappers/HeaderDataWrapper/HeaderDataWrap
 function Header (MyHeaderDataWrapper: HeaderDataWrapper, Navbar: JSX.Element) {
     return(
         <div className={"Header"}>
-            <img className={"ProfilePicture"} alt={MyHeaderDataWrapper.getProfilePictureLocation()}></img>
+            <div className="profile-picture-container">
+                <img className={"profile-picture"} alt="ProfilePicture" src={MyHeaderDataWrapper.getProfilePictureLocation()}></img>
+            </div>
             {Navbar}
         </div>
     )

@@ -5,10 +5,11 @@ import yaml from "js-yaml";
 
 const parsedHeaderData : HeaderData = yaml.load(headerData) as HeaderData;
 
+const imagePath = (): string => {
+    return parsedHeaderData.ProfilePictureLocation;
+}
 const MyHeaderDataWrapper: HeaderDataWrapper = {
-    getProfilePictureLocation(): string {
-        return parsedHeaderData.ProfilePictureLocation;
-    }
+    getProfilePictureLocation: (): string => imagePath()
 }
 
 export default MyHeaderDataWrapper;
