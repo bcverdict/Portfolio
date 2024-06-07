@@ -8,8 +8,8 @@ function ContactCard(contactCardDataWrapper: ContactCardDataWrapper) {
             </div>
             <div className="right">
                 <div>{contactCardDataWrapper.getName()}</div>
-                <a href={contactCardDataWrapper.getLinkedIn()}>LinkedIn</a>
-                <a href={contactCardDataWrapper.getGithub()}>Github</a>
+                <a href={contactCardDataWrapper.getLinkedIn()} target="_blank">LinkedIn</a>
+                <a href={contactCardDataWrapper.getGithub()} target="_blank">Github</a>
             </div>
         </div>
     );
