@@ -2,8 +2,9 @@ import React, { useEffect, useState } from 'react';
 import './App.css';
 import ElementFactory from "./Factories/ElementFactory";
 import AppError from "./Errors/AppError";
-import Projects from "./Pages/Projects";
+import Projects from "./Pages/Projects/Projects";
 import {BrowserRouter, Route, Routes} from "react-router-dom";
+import Contact from "./Pages/Contact/Contact";
 
 const App: React.FC = () => {
     const [headerContent, setHeaderContent] = useState<JSX.Element>(ElementFactory.CreateEmptyElement());
@@ -28,15 +29,14 @@ const App: React.FC = () => {
 
     return (
         <div className="App">
-            <header className="App-header">
-                {headerContent}
-                <BrowserRouter>
-                    <Routes>
-                        <Route path="/" element={<Projects/>}/>
-                        <Route path="projects" element={<Projects/>}/>
-                    </Routes>
-                </BrowserRouter>
-            </header>
+            {headerContent}
+            <BrowserRouter>
+                <Routes>
+                    <Route path="/" element={<Projects/>}/>
+                    <Route path="projects" element={<Projects/>}/>
+                    <Route path="contact" element={<Contact/>}/>
+                </Routes>
+            </BrowserRouter>
         </div>
     );
 }

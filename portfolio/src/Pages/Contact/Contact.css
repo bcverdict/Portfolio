@@ -1,0 +1,12 @@
+
+.contact-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+.contact-page-card {
+    max-width: 50%;
+}

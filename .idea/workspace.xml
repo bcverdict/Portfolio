@@ -5,8 +5,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a5a93d6b-bdca-4fab-a858-2ffa6e19d68c" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/portfolio/src/Data/ContactCardData.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/portfolio/src/Pages/Contact/Contact.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/portfolio/src/Pages/Contact/Contact.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/portfolio/src/Wrappers/ContactDataWrapper/ContactCardDataWrapper.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/portfolio/src/Wrappers/ContactDataWrapper/MyContactCardDataWrapper.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/portfolio/src/components/ContactCard/ContactCard.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/portfolio/src/components/ContactCard/ContactCard.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/portfolio/src/types/contactCardData.d.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/portfolio/src/components/Navbar/Navbar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/src/components/Navbar/Navbar.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portfolio/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/src/App.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portfolio/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/src/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portfolio/src/Factories/ElementFactory.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/src/Factories/ElementFactory.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portfolio/src/Pages/Page.css" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/src/Pages/Projects/Projects.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portfolio/src/Pages/Projects.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/src/Pages/Projects/Projects.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portfolio/src/Wrappers/ConfigDataWrapper/ConfigDataWrapper.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/src/Wrappers/ConfigDataWrapper/ConfigDataWrapper.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portfolio/src/Wrappers/ConfigDataWrapper/MyConfigDataWrapper.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/src/Wrappers/ConfigDataWrapper/MyConfigDataWrapper.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portfolio/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/src/index.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,9 +31,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="CSS File" />
         <option value="TypeScript File" />
         <option value="TypeScript JSX File" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
@@ -65,11 +80,11 @@
       <recent name="C:\Users\Nick\Documents\WebStormProjects\portfolio\portfolio\src\Errors" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Nick\Documents\WebStormProjects\portfolio\portfolio\src\Pages\Projects" />
+      <recent name="C:\Users\Nick\Documents\WebStormProjects\portfolio\portfolio\src\Pages\Contact" />
       <recent name="C:\Users\Nick\Documents\WebStormProjects\portfolio\portfolio\src\Wrappers\FileReaderWrappers" />
       <recent name="C:\Users\Nick\Documents\WebStormProjects\portfolio\portfolio\src\Wrappers\PeojectMediaWrapper" />
       <recent name="C:\Users\Nick\Documents\WebStormProjects\portfolio\portfolio\src\components\ProjectCard" />
-      <recent name="C:\Users\Nick\Documents\WebStormProjects\portfolio\portfolio\public" />
-      <recent name="C:\Users\Nick\Documents\WebStormProjects\portfolio\portfolio\src\media\projectPreviews\project-0" />
     </key>
   </component>
   <component name="RunManager" selected="JavaScript Debug.Debug">
@@ -104,7 +119,7 @@
       <workItem from="1717354207944" duration="750000" />
       <workItem from="1717456442195" duration="7879000" />
       <workItem from="1717621883381" duration="13546000" />
-      <workItem from="1717701160511" duration="5970000" />
+      <workItem from="1717701160511" duration="14476000" />
     </task>
     <servers />
   </component>

@@ -1,0 +1,44 @@
+
+.contact-card {
+    display: flex;
+    flex-direction: row;
+    border: 2px solid #efefef;
+    border-radius: 15px;
+}
+
+.left {
+    display: flex;
+    flex-direction: column;
+    max-width: 30%;
+}
+
+.right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    max-width: 70%;
+}
+
+
+.right div, .right a {
+    display: flex;
+    font-size: calc(5px + 2vmin);
+    margin: 8px 0;
+}
+
+.right a {
+    text-decoration: none;
+    color: #0073b1;
+    display: inline-block;
+}
+
+.right a:hover {
+    text-decoration: underline;
+}
+
+.right div {
+    font-weight: bold;
+}
+
+

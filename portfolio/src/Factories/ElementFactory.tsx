@@ -6,6 +6,8 @@ import Navbar from "../components/Navbar/Navbar";
 import {ProjectDataWrapper} from "../Wrappers/ProjectDataWrapper/ProjectDataWrapper";
 import ProjectCardList from "../components/ProjectCardList/ProjectCardList";
 import ComponentLoadError from "../Errors/ComponentLoadError";
+import {ContactCardDataWrapper} from "../Wrappers/ContactDataWrapper/ContactCardDataWrapper";
+import ContactCard from "../components/ContactCard/ContactCard";
 
 export class ElementFactory {
 
@@ -42,6 +44,17 @@ export class ElementFactory {
             return <ProjectCardList dataWrapper={projectDataWrapper}/>;
         } catch (e) {
             throw new ComponentLoadError("ProjectDataWrapper");
+        }
+
+    }
+
+    public static async CreateContactCardElement(){
+        try {
+            const contactCardDataWrapper: ContactCardDataWrapper = await MyConfigDataWrapper.getContactCardDataWrapper();
+
+            return ContactCard(contactCardDataWrapper);
+        } catch (e) {
+            throw new ComponentLoadError("ContactCardDataWrapper");
         }
 
     }

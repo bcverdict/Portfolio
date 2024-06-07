@@ -3,6 +3,7 @@ import {HeaderDataWrapper} from "../HeaderDataWrapper/HeaderDataWrapper";
 import {NavbarDataWrapper} from "../NavbarDataWrapper/NavbarDataWrapper";
 import {ProjectDataWrapper} from "../ProjectDataWrapper/ProjectDataWrapper";
 import ComponentLoadError from "../../Errors/ComponentLoadError";
+import {ContactCardDataWrapper} from "../ContactDataWrapper/ContactCardDataWrapper";
 
 const fetchHeaderDataWrapper = async (): Promise<HeaderDataWrapper> => {
     try {
@@ -28,10 +29,19 @@ const fetchProjectDataWrapper = async (): Promise<ProjectDataWrapper> => {
     }
 };
 
+const fetchContactCardDataWrapper = async (): Promise<ContactCardDataWrapper> => {
+    try {
+        return (await import("../ContactDataWrapper/MyContactCardDataWrapper")).default;
+    } catch (error) {
+        throw new ComponentLoadError("ContactCardDataWrapper");
+    }
+};
+
 const myConfigDataWrapper: ConfigDataWrapper = {
     getHeaderDataWrapper: fetchHeaderDataWrapper,
     getNavbarDataWrapper: fetchNavbarDataWrapper,
-    getProjectDataWrapper: fetchProjectDataWrapper
+    getProjectDataWrapper: fetchProjectDataWrapper,
+    getContactCardDataWrapper: fetchContactCardDataWrapper
 };
 
 export default myConfigDataWrapper;

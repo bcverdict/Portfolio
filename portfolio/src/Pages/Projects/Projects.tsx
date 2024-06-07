@@ -1,6 +1,5 @@
-import './Page.css'
-import {ElementFactory} from "../Factories/ElementFactory";
-import AppError from "../Errors/AppError";
+import {ElementFactory} from "../../Factories/ElementFactory";
+import AppError from "../../Errors/AppError";
 import {useEffect, useState} from "react";
 
 function Projects() {
