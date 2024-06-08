@@ -3,11 +3,7 @@ import { ProjectDataWrapper } from "../../Wrappers/ProjectDataWrapper/ProjectDat
 import ProjectCard from "../ProjectCard/ProjectCard";
 import './ProjectCardList.css'
 
-interface ProjectCardListProps {
-    dataWrapper: ProjectDataWrapper;
-}
-
-const ProjectCardList: React.FC<ProjectCardListProps> = ({ dataWrapper }) => {
+const ProjectCardList = ( dataWrapper: ProjectDataWrapper ) => {
     const projects = Array.from({ length: dataWrapper.numberOfProjects() }, (_, i) => ({
         id: i,
         description: dataWrapper.getProjectDescription(i),

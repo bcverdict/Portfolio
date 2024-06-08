@@ -5,9 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a5a93d6b-bdca-4fab-a858-2ffa6e19d68c" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/portfolio/src/Wrappers/GithubAPIWrapper/GithubAPIWrapper.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/portfolio/src/Data/ContactCardData.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/src/Data/ContactCardData.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/portfolio/src/components/ContactCard/ContactCard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/src/components/ContactCard/ContactCard.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portfolio/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/src/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portfolio/src/Factories/ElementFactory.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/src/Factories/ElementFactory.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portfolio/src/components/ProjectCardList/ProjectCardList.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/src/components/ProjectCardList/ProjectCardList.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,8 +20,9 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="TypeScript File" />
-        <option value="TypeScript JSX File" />
         <option value="CSS File" />
+        <option value="HTTP Request" />
+        <option value="TypeScript JSX File" />
       </list>
     </option>
   </component>
@@ -73,7 +76,7 @@
       <recent name="C:\Users\Nick\Documents\WebStormProjects\portfolio\portfolio\src\components\ProjectCard" />
     </key>
   </component>
-  <component name="RunManager" selected="JavaScript Debug.Debug">
+  <component name="RunManager" selected="npm.start">
     <configuration name="Debug" type="JavascriptDebugType" uri="http://localhost:3000/">
       <method v="2" />
     </configuration>
@@ -105,12 +108,18 @@
       <workItem from="1717354207944" duration="750000" />
       <workItem from="1717456442195" duration="7879000" />
       <workItem from="1717621883381" duration="13546000" />
-      <workItem from="1717701160511" duration="19331000" />
+      <workItem from="1717701160511" duration="19927000" />
+      <workItem from="1717792917374" duration="1829000" />
+      <workItem from="1717874252656" duration="1425000" />
+      <workItem from="1717877046277" duration="5507000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName=".env" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -118,14 +127,7 @@
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/portfolio/src/Wrappers/HeaderDataWrapper/MyHeaderDataWrapper.tsx</url>
           <line>8</line>
-          <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="24" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/portfolio/src/Factories/ElementFactory.tsx</url>
-          <line>30</line>
-          <properties lambdaOrdinal="-1" />
-          <option name="timeStamp" value="25" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

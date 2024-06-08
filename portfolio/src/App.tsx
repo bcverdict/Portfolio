@@ -5,8 +5,9 @@ import AppError from "./Errors/AppError";
 import Projects from "./Pages/Projects/Projects";
 import {BrowserRouter, Route, Routes} from "react-router-dom";
 import Contact from "./Pages/Contact/Contact";
+import GithubAPIWrapper from "./Wrappers/GithubAPIWrapper/GithubAPIWrapper";
 
-const App: React.FC = () => {
+const App = () => {
     const [headerContent, setHeaderContent] = useState<JSX.Element>(ElementFactory.CreateEmptyElement());
 
     useEffect(() => {

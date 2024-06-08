@@ -41,9 +41,9 @@ export class ElementFactory {
         try {
             const projectDataWrapper: ProjectDataWrapper = await MyConfigDataWrapper.getProjectDataWrapper();
 
-            return <ProjectCardList dataWrapper={projectDataWrapper}/>;
+            return ProjectCardList(projectDataWrapper);
         } catch (e) {
-            throw new ComponentLoadError("ProjectDataWrapper");
+            throw new ComponentLoadError("ProjectCardList");
         }
 
     }
@@ -54,7 +54,7 @@ export class ElementFactory {
 
             return ContactCard(contactCardDataWrapper);
         } catch (e) {
-            throw new ComponentLoadError("ContactCardDataWrapper");
+            throw new ComponentLoadError("ContactCard");
         }
 
     }
