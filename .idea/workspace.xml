@@ -5,11 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a5a93d6b-bdca-4fab-a858-2ffa6e19d68c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/portfolio/src/Wrappers/GithubAPIWrapper/GithubAPIWrapper.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/portfolio/src/types/githubAPIData.d.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/portfolio/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/src/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/portfolio/src/Factories/ElementFactory.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/src/Factories/ElementFactory.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/portfolio/src/components/ProjectCardList/ProjectCardList.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/src/components/ProjectCardList/ProjectCardList.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portfolio/src/Wrappers/GithubAPIWrapper/GithubAPIWrapper.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/src/Wrappers/GithubAPIWrapper/GithubAPIWrapper.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,10 +18,10 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="TypeScript File" />
         <option value="CSS File" />
         <option value="HTTP Request" />
         <option value="TypeScript JSX File" />
+        <option value="TypeScript File" />
       </list>
     </option>
   </component>
@@ -76,7 +75,7 @@
       <recent name="C:\Users\Nick\Documents\WebStormProjects\portfolio\portfolio\src\components\ProjectCard" />
     </key>
   </component>
-  <component name="RunManager" selected="npm.start">
+  <component name="RunManager" selected="JavaScript Debug.Debug">
     <configuration name="Debug" type="JavascriptDebugType" uri="http://localhost:3000/">
       <method v="2" />
     </configuration>
@@ -112,6 +111,7 @@
       <workItem from="1717792917374" duration="1829000" />
       <workItem from="1717874252656" duration="1425000" />
       <workItem from="1717877046277" duration="5507000" />
+      <workItem from="1718063610303" duration="2126000" />
     </task>
     <servers />
   </component>
@@ -125,11 +125,18 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/portfolio/src/Wrappers/HeaderDataWrapper/MyHeaderDataWrapper.tsx</url>
-          <line>8</line>
-          <option name="timeStamp" value="24" />
+          <url>file://$PROJECT_DIR$/portfolio/src/Wrappers/GithubAPIWrapper/GithubAPIWrapper.tsx</url>
+          <line>20</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="27" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
+    <watches-manager>
+      <configuration name="JavascriptDebugType">
+        <watch expression="data" />
+        <watch expression="data[&quot;0&quot;].private" />
+      </configuration>
+    </watches-manager>
   </component>
 </project>

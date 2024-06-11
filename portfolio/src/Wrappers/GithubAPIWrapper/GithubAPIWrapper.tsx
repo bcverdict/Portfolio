@@ -1,14 +1,7 @@
 import React, { useEffect, useState } from 'react';
 
-// Define the type for your response data
-interface Repo {
-    id: number;
-    name: string;
-    // Add other fields as needed
-}
-
 const GithubRepos: React.FC = () => {
-    const [repos, setRepos] = useState<Repo[]>([]);
+    const [repos, setRepos] = useState<Repository[]>([]);
     const token = process.env.REACT_APP_GITHUB_TOKEN;
 
     useEffect(() => {
@@ -24,7 +17,7 @@ const GithubRepos: React.FC = () => {
                     throw new Error('Network response was not ok');
                 }
 
-                const data: Repo[] = await response.json();
+                const data: Repository[] = await response.json();
                 setRepos(data);
             } catch (error) {
                 console.error('Error fetching data:', error);
