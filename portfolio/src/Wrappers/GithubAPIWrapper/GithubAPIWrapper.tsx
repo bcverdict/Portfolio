@@ -1,4 +1,5 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect } from 'react';
+import {updateRepoInfo} from "../FirebaseWrapper/FirebaseWrapper";
 
 interface CleanRepository {
     name: string
@@ -19,52 +20,44 @@ const GetLanguages = async (repo: Repository): Promise<[string, number][]> => {
 
     return await response.json();
 }
-const CleanData = async (repos: Repository[]): Promise<CleanRepository[]> => {
 
-    return await Promise.all(repos.map(async (repo: Repository): Promise<CleanRepository> => ({
-        name: repo.name,
-        link: repo.html_url,
-        description: "",
-        previewImage: "",
-        previewGif: "",
-        languages: await GetLanguages(repo)
-    })));
+type CleanDataReturnType = {
+    repositories: CleanRepository[];
+};
+
+const CleanData = async (repos: Repository[]): Promise<CleanDataReturnType> => {
+
+    return {
+        repositories: await Promise.all(repos.map(async (repo: Repository): Promise<CleanRepository> => ({
+            name: repo.name,
+            link: repo.html_url,
+            description: "test",
+            previewImage: "",
+            previewGif: "",
+            languages: await GetLanguages(repo)
+        })))
+    };
+
 }
-const GithubAPIWrapper: React.FC = () => {
-    const [repos, setRepos] = useState<CleanRepository[]>([]);
-    const token = process.env.REACT_APP_GITHUB_TOKEN;
+const GithubAPIWrapper = () => {
+    const fetchRepos = async () => {
+        const response = await fetch('https://api.github.com/users/bcverdict/repos', {
+            headers: {
+                Authorization: `Bearer ${process.env.REACT_APP_GITHUB_TOKEN}`,
+            },
+        });
 
-    useEffect(() => {
-        const fetchRepos = async () => {
-            const response = await fetch('https://api.github.com/users/bcverdict/repos', {
-                headers: {
-                    Authorization: `Bearer ${process.env.REACT_APP_GITHUB_TOKEN}`,
-                },
-            });
+        if (!response.ok) {
+            throw new Error('Network response was not ok');
+        }
 
-            if (!response.ok) {
-                throw new Error('Network response was not ok');
-            }
+        const data: Repository[] = await response.json();
+        const cleanData = await CleanData(data);
 
-            const data: Repository[] = await response.json();
-            const cleanData = await CleanData(data);
-            
-            setRepos(cleanData);
-        };
+        await updateRepoInfo(cleanData);
+    };
 
-        fetchRepos();
-    }, [token]);
-
-    return (
-        <div>
-            <h1>GitHub Repositories</h1>
-            <ul>
-                {repos.map((repo: CleanRepository, index: number) => (
-                    <li key={index}>{repo.name}</li>
-                ))}
-            </ul>
-        </div>
-    );
+    fetchRepos();
 };
 
 export default GithubAPIWrapper;

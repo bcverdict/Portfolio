@@ -7,6 +7,7 @@
     <list default="true" id="a5a93d6b-bdca-4fab-a858-2ffa6e19d68c" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/portfolio/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/src/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portfolio/src/Wrappers/FirebaseWrapper/FirebaseWrapper.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/src/Wrappers/FirebaseWrapper/FirebaseWrapper.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/portfolio/src/Wrappers/GithubAPIWrapper/GithubAPIWrapper.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/src/Wrappers/GithubAPIWrapper/GithubAPIWrapper.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -75,7 +76,7 @@
       <recent name="C:\Users\Nick\Documents\WebStormProjects\portfolio\portfolio\src\components\ProjectCard" />
     </key>
   </component>
-  <component name="RunManager" selected="JavaScript Debug.Debug">
+  <component name="RunManager" selected="npm.start">
     <configuration name="Debug" type="JavascriptDebugType" uri="http://localhost:3000/">
       <method v="2" />
     </configuration>
@@ -114,7 +115,7 @@
       <workItem from="1718063610303" duration="2126000" />
       <workItem from="1718145777172" duration="3564000" />
       <workItem from="1718155288869" duration="6684000" />
-      <workItem from="1718242932599" duration="2227000" />
+      <workItem from="1718242932599" duration="4639000" />
     </task>
     <servers />
   </component>
@@ -125,6 +126,22 @@
     <option featureType="com.intellij.fileTypeFactory" implementationName=".env" />
   </component>
   <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/portfolio/src/Wrappers/FirebaseWrapper/FirebaseWrapper.tsx</url>
+          <line>34</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="35" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/portfolio/src/Wrappers/FirebaseWrapper/FirebaseWrapper.tsx</url>
+          <line>24</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="37" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
     <watches-manager>
       <configuration name="JavascriptDebugType">
         <watch expression="data" />
