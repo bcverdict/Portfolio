@@ -31,6 +31,7 @@ const App = () => {
     return (
         <div className="App">
             {headerContent}
+            <GithubAPIWrapper/>
             <BrowserRouter>
                 <Routes>
                     <Route path="/" element={<Projects/>}/>
