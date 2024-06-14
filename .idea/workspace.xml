@@ -6,13 +6,11 @@
   <component name="ChangeListManager">
     <list default="true" id="a5a93d6b-bdca-4fab-a858-2ffa6e19d68c" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/portfolio/src/Factories/ElementFactory.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/src/Factories/ElementFactory.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/portfolio/src/Pages/Projects/Projects.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/src/Pages/Projects/Projects.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/portfolio/src/Wrappers/ConfigDataWrapper/ConfigDataWrapper.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/src/Wrappers/ConfigDataWrapper/ConfigDataWrapper.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/portfolio/src/Wrappers/ConfigDataWrapper/MyConfigDataWrapper.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/src/Wrappers/ConfigDataWrapper/MyConfigDataWrapper.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/portfolio/src/Wrappers/ProjectDataWrapper/MyProjectDataWrapper.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/src/Wrappers/ProjectDataWrapper/MyProjectDataWrapper.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/portfolio/src/Wrappers/ProjectDataWrapper/ProjectDataWrapper.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/src/Wrappers/ProjectDataWrapper/ProjectDataWrapper.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portfolio/src/components/ProjectCard/ProjectCard.css" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/src/components/ProjectCard/ProjectCard.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/portfolio/src/components/ProjectCard/ProjectCard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/src/components/ProjectCard/ProjectCard.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portfolio/src/components/ProjectCardList/ProjectCardList.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/src/components/ProjectCardList/ProjectCardList.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -80,7 +78,7 @@
       <recent name="C:\Users\Nick\Documents\WebStormProjects\portfolio\portfolio\src\components\ProjectCard" />
     </key>
   </component>
-  <component name="RunManager" selected="JavaScript Debug.Debug">
+  <component name="RunManager" selected="npm.start">
     <configuration name="Debug" type="JavascriptDebugType" uri="http://localhost:3000/">
       <method v="2" />
     </configuration>
@@ -160,13 +158,13 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/portfolio/src/Wrappers/ProjectDataWrapper/MyProjectDataWrapper.tsx</url>
-          <line>37</line>
+          <line>43</line>
           <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="68" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/portfolio/src/Wrappers/ProjectDataWrapper/MyProjectDataWrapper.tsx</url>
-          <line>31</line>
+          <line>37</line>
           <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="69" />
         </line-breakpoint>

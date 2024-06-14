@@ -3,12 +3,13 @@ import './ProjectCard.css';
 
 interface ProjectCardProps {
     id: number;
+    name: string;
     description: string;
     gifPath: string;
     imagePath: string;
 }
 
-const ProjectCard: React.FC<ProjectCardProps> = ({ id, description, gifPath, imagePath }) => {
+const ProjectCard: React.FC<ProjectCardProps> = ({ id, name, description, gifPath, imagePath }) => {
 
     const [isHovering, setIsHovering] = useState(false);
 
@@ -26,8 +27,8 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ id, description, gifPath, ima
             onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave}
         >
-            <div className={"project-description"}>
-                <p>{description}</p>
+            <div className={"project-name"}>
+                <p>{name}</p>
             </div>
             <div className={"project-preview"}>
 

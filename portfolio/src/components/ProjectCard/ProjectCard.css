@@ -16,7 +16,7 @@
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
-.project-description p {
+.project-name p {
     margin-top: 0;
     margin-bottom: 20px;
     text-align: center;
@@ -36,7 +36,7 @@
     border-radius: 15px;
 }
 
-.project-description {
+.project-name {
     display: flex;
     width: 100%;
     justify-content: center;

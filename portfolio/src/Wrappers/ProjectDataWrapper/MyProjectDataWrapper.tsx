@@ -26,6 +26,12 @@ class MyProjectDataWrapper implements ProjectDataWrapper {
         return (this.parsedProjectData as CleanDataReturnType).repositories[id].previewGif;
     }
 
+    getProjectName(id: number): string {
+        if(!this.parsedProjectData) return "";
+
+        return (this.parsedProjectData as CleanDataReturnType).repositories[id].name;
+    }
+
     getProjectDescription(id: number): string {
         if(!this.parsedProjectData) return "";
 
