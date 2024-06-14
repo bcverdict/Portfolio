@@ -1,30 +1,41 @@
 import { ProjectDataWrapper } from './ProjectDataWrapper';
-import {ProjectData} from "../../types/projectData";
-import yaml from "js-yaml";
-import projectData from '../../Data/ProjectData.yaml';
+import firebase from "firebase/compat/app";
+import {CleanDataReturnType} from "../GithubAPIWrapper/GithubAPIWrapper";
 
 class MyProjectDataWrapper implements ProjectDataWrapper {
+    parsedProjectData: firebase.firestore.DocumentData | null;
 
-    parsedProjectData: ProjectData = yaml.load(projectData) as ProjectData;
+    constructor(data: firebase.firestore.DocumentData | null) {
+        this.parsedProjectData = data as CleanDataReturnType;
+    }
 
-    generalPath(id: number): string {
-        return this.parsedProjectData.projectPrefix+id+this.parsedProjectData.projectSuffix+".";
+    dataIsNull(){
+        return this.parsedProjectData == null;
     }
 
     getImagePath(id: number): string {
-        return this.generalPath(id)+this.parsedProjectData.imageType;
+
+        if(!this.parsedProjectData) return "";
+
+        return (this.parsedProjectData as CleanDataReturnType).repositories[id].previewImage;
     }
 
     getGifPath(id: number): string {
-        return this.generalPath(id)+this.parsedProjectData.animType;
+        if(!this.parsedProjectData) return "";
+
+        return (this.parsedProjectData as CleanDataReturnType).repositories[id].previewGif;
     }
 
     getProjectDescription(id: number): string {
-        return this.parsedProjectData.projects[id] || "Description not found";
+        if(!this.parsedProjectData) return "";
+
+        return (this.parsedProjectData as CleanDataReturnType).repositories[id].description;
     }
 
     numberOfProjects(): number {
-        return Object.keys(this.parsedProjectData.projects).length;
+        if(!this.parsedProjectData) return 0;
+
+        return (this.parsedProjectData as CleanDataReturnType).repositories.length;
     }
 }
 

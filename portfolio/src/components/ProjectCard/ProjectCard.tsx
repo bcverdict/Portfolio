@@ -30,9 +30,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ id, description, gifPath, ima
                 <p>{description}</p>
             </div>
             <div className={"project-preview"}>
-                {
-                    <img className={"project-image"} src={isHovering ? gifPath : imagePath} alt="Project Preview" />
-                }
+
             </div>
         </div>
     );

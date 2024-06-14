@@ -8,6 +8,7 @@ import ProjectCardList from "../components/ProjectCardList/ProjectCardList";
 import ComponentLoadError from "../Errors/ComponentLoadError";
 import {ContactCardDataWrapper} from "../Wrappers/ContactDataWrapper/ContactCardDataWrapper";
 import ContactCard from "../components/ContactCard/ContactCard";
+import {getRepoInfo} from "../Wrappers/FirebaseWrapper/FirebaseWrapper";
 
 export class ElementFactory {
 
@@ -38,13 +39,14 @@ export class ElementFactory {
     }
 
     public static async CreateProjectCardListElement(){
-        try {
-            const projectDataWrapper: ProjectDataWrapper = await MyConfigDataWrapper.getProjectDataWrapper();
 
-            return ProjectCardList(projectDataWrapper);
-        } catch (e) {
-            throw new ComponentLoadError("ProjectCardList");
-        }
+        const data = await getRepoInfo();
+        const projectDataWrapper: ProjectDataWrapper = await MyConfigDataWrapper.getProjectDataWrapper(data);
+
+        if(!projectDataWrapper || projectDataWrapper.dataIsNull()) return;
+
+        return ProjectCardList(projectDataWrapper);
+
 
     }
 

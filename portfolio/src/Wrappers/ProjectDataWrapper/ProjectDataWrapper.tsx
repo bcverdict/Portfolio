@@ -3,4 +3,5 @@ export interface ProjectDataWrapper {
     getGifPath(id: number): string;
     getProjectDescription(id: number): string;
     numberOfProjects(): number;
+    dataIsNull(): boolean;
 }
