@@ -24,7 +24,7 @@ const App = () => {
             }
         };
 
-        GithubAPIWrapper();
+        //GithubAPIWrapper();
         fetchElements();
     }, []);
 

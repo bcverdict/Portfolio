@@ -7,8 +7,10 @@
     <list default="true" id="a5a93d6b-bdca-4fab-a858-2ffa6e19d68c" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/portfolio/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/src/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/portfolio/src/Wrappers/FirebaseWrapper/FirebaseWrapper.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/src/Wrappers/FirebaseWrapper/FirebaseWrapper.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portfolio/src/Wrappers/ConfigDataWrapper/MyConfigDataWrapper.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/src/Wrappers/ConfigDataWrapper/MyConfigDataWrapper.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/portfolio/src/Wrappers/GithubAPIWrapper/GithubAPIWrapper.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/src/Wrappers/GithubAPIWrapper/GithubAPIWrapper.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portfolio/src/Wrappers/ProjectDataWrapper/MyProjectDataWrapper.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/src/Wrappers/ProjectDataWrapper/MyProjectDataWrapper.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portfolio/src/Wrappers/ProjectDataWrapper/ProjectDataWrapper.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/src/Wrappers/ProjectDataWrapper/ProjectDataWrapper.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -131,14 +133,24 @@
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/portfolio/src/Wrappers/FirebaseWrapper/FirebaseWrapper.tsx</url>
           <line>34</line>
-          <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="35" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/portfolio/src/Wrappers/FirebaseWrapper/FirebaseWrapper.tsx</url>
           <line>24</line>
-          <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="37" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/portfolio/src/Factories/ElementFactory.tsx</url>
+          <line>41</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="48" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/portfolio/src/Factories/ElementFactory.tsx</url>
+          <line>43</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="49" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

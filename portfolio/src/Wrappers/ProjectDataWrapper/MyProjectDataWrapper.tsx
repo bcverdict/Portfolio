@@ -1,26 +1,31 @@
 import { ProjectDataWrapper } from './ProjectDataWrapper';
-import yaml from 'js-yaml';
+import {ProjectData} from "../../types/projectData";
+import yaml from "js-yaml";
 import projectData from '../../Data/ProjectData.yaml';
-import { ProjectData } from '../../types/projectData';
 
-const parsedProjectData: ProjectData = yaml.load(projectData) as ProjectData;
+class MyProjectDataWrapper implements ProjectDataWrapper {
 
-const generalPath = (id: number): string => {
-    return parsedProjectData.projectPrefix+id+parsedProjectData.projectSuffix+".";
+    parsedProjectData: ProjectData = yaml.load(projectData) as ProjectData;
+
+    generalPath(id: number): string {
+        return this.parsedProjectData.projectPrefix+id+this.parsedProjectData.projectSuffix+".";
+    }
+
+    getImagePath(id: number): string {
+        return this.generalPath(id)+this.parsedProjectData.imageType;
+    }
+
+    getGifPath(id: number): string {
+        return this.generalPath(id)+this.parsedProjectData.animType;
+    }
+
+    getProjectDescription(id: number): string {
+        return this.parsedProjectData.projects[id] || "Description not found";
+    }
+
+    numberOfProjects(): number {
+        return Object.keys(this.parsedProjectData.projects).length;
+    }
 }
-const imagePath = (id: number): string => {
-    return generalPath(id)+parsedProjectData.imageType;
-}
-
-const animPath = (id: number): string => {
-    return generalPath(id)+parsedProjectData.animType;
-}
-
-const MyProjectDataWrapper: ProjectDataWrapper = {
-    getImagePath: (id: number): string => imagePath(id),
-    getGifPath: (id: number): string => animPath(id),
-    getProjectDescription: (id: number): string => parsedProjectData.projects[id] || "Description not found",
-    numberOfProjects: (): number => Object.keys(parsedProjectData.projects).length
-};
 
 export default MyProjectDataWrapper;

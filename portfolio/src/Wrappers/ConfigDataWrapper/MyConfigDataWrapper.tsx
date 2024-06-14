@@ -23,7 +23,9 @@ const fetchNavbarDataWrapper = async (): Promise<NavbarDataWrapper> => {
 
 const fetchProjectDataWrapper = async (): Promise<ProjectDataWrapper> => {
     try {
-        return (await import("../ProjectDataWrapper/MyProjectDataWrapper")).default;
+        const module = await import("../ProjectDataWrapper/MyProjectDataWrapper");
+        const projectDataWrapper = module.default;
+        return new projectDataWrapper;
     } catch (error) {
         throw new ComponentLoadError("ProjectDataWrapper");
     }

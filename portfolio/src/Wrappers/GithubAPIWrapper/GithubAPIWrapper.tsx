@@ -21,7 +21,7 @@ const GetLanguages = async (repo: Repository): Promise<[string, number][]> => {
     return await response.json();
 }
 
-type CleanDataReturnType = {
+export type CleanDataReturnType = {
     repositories: CleanRepository[];
 };
 
