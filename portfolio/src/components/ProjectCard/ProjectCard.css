@@ -41,3 +41,14 @@
     width: 100%;
     justify-content: center;
 }
+
+.project-description {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.project-description p {
+    word-wrap: break-word;
+    width: 100%;
+}

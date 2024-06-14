@@ -31,7 +31,9 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ id, name, description, gifPat
                 <p>{name}</p>
             </div>
             <div className={"project-preview"}>
-
+            </div>
+            <div className={"project-description"}>
+                <p>{description}</p>
             </div>
         </div>
     );
