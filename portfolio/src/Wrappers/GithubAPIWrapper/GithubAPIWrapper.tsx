@@ -18,6 +18,25 @@ const getLanguages = async (repo: Repository): Promise<[string, number][]> => {
     return await response.json();
 }
 
+const getProjectDescription = async (repo: Repository) => {
+
+    const readMeContent = await getReadme(repo)
+
+    return projectDescription(readMeContent);
+
+}
+const projectDescription = (content: string): string => {
+    const sectionTitle = "Project Overview";
+    const regex = new RegExp(`## ${sectionTitle}\\s+([\\s\\S]*?)(?=\\s+## |$)`, 'i');
+    const match = content.match(regex);
+
+    if (!match || !match[1]) {
+        return '';
+    }
+
+    return match[1].trim();
+}
+
 const getReadme = async (repo: Repository): Promise<string> => {
     try {
         const response = await fetch(`https://api.github.com/repos/bcverdict/${repo.name}/readme`, {
@@ -46,7 +65,7 @@ const cleanData = async (repos: Repository[]): Promise<CleanDataReturnType> => {
         repositories: await Promise.all(repos.map(async (repo: Repository): Promise<CleanRepository> => ({
             name: repo.name,
             link: repo.html_url,
-            description: await getReadme(repo),
+            description: await getProjectDescription(repo),
             previewImage: "",
             previewGif: "",
             languages: await getLanguages(repo),
