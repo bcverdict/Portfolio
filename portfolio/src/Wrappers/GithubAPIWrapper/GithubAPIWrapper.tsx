@@ -1,5 +1,3 @@
-import { useEffect } from 'react';
-import {updateRepoInfo} from "../FirebaseWrapper/FirebaseWrapper";
 
 interface CleanRepository {
     name: string
@@ -10,8 +8,7 @@ interface CleanRepository {
     languages: [string, number][]
 }
 
-const GetLanguages = async (repo: Repository): Promise<[string, number][]> => {
-
+const getLanguages = async (repo: Repository): Promise<[string, number][]> => {
     const response = await fetch(repo.languages_url, {
         headers: {
             Authorization: `Bearer ${process.env.REACT_APP_GITHUB_TOKEN}`,
@@ -21,25 +18,43 @@ const GetLanguages = async (repo: Repository): Promise<[string, number][]> => {
     return await response.json();
 }
 
-type CleanDataReturnType = {
+const getReadme = async (repo: Repository): Promise<string> => {
+    try {
+        const response = await fetch(`https://api.github.com/repos/bcverdict/${repo.name}/readme`, {
+            headers: {
+                Authorization: `Bearer ${process.env.REACT_APP_GITHUB_TOKEN}`,
+                Accept: 'application/vnd.github.v3.raw',
+            },
+        });
+
+        if (!response.ok) {
+            return "No readme found"
+        }
+
+        return await response.text();
+    } catch (e) {
+        return "No readme found"
+    }
+}
+
+export type CleanDataReturnType = {
     repositories: CleanRepository[];
 };
 
-const CleanData = async (repos: Repository[]): Promise<CleanDataReturnType> => {
-
+const cleanData = async (repos: Repository[]): Promise<CleanDataReturnType> => {
     return {
         repositories: await Promise.all(repos.map(async (repo: Repository): Promise<CleanRepository> => ({
             name: repo.name,
             link: repo.html_url,
-            description: "test",
+            description: await getReadme(repo),
             previewImage: "",
             previewGif: "",
-            languages: await GetLanguages(repo)
+            languages: await getLanguages(repo),
         })))
     };
-
 }
-const GithubAPIWrapper = () => {
+
+const getData = () => {
     const fetchRepos = async () => {
         const response = await fetch('https://api.github.com/users/bcverdict/repos', {
             headers: {
@@ -52,12 +67,12 @@ const GithubAPIWrapper = () => {
         }
 
         const data: Repository[] = await response.json();
-        const cleanData = await CleanData(data);
+        const a = await cleanData(data);
 
-        await updateRepoInfo(cleanData);
+        return a;
     };
 
-    fetchRepos();
+    return fetchRepos();
 };
 
-export default GithubAPIWrapper;
+export default getData;

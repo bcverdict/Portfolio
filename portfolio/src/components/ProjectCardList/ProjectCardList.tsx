@@ -6,6 +6,7 @@ import './ProjectCardList.css'
 const ProjectCardList = ( dataWrapper: ProjectDataWrapper ) => {
     const projects = Array.from({ length: dataWrapper.numberOfProjects() }, (_, i) => ({
         id: i,
+        name: dataWrapper.getProjectName(i),
         description: dataWrapper.getProjectDescription(i),
         gifPath: dataWrapper.getGifPath(i),
         imagePath: dataWrapper.getImagePath(i)
@@ -16,6 +17,7 @@ const ProjectCardList = ( dataWrapper: ProjectDataWrapper ) => {
             {projects.map(project => (
                 <ProjectCard
                     key={project.id}
+                    name={project.name}
                     description={project.description}
                     id={project.id}
                     gifPath={project.gifPath}

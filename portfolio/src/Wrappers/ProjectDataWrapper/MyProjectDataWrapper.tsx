@@ -1,26 +1,48 @@
 import { ProjectDataWrapper } from './ProjectDataWrapper';
-import yaml from 'js-yaml';
-import projectData from '../../Data/ProjectData.yaml';
-import { ProjectData } from '../../types/projectData';
+import firebase from "firebase/compat/app";
+import {CleanDataReturnType} from "../GithubAPIWrapper/GithubAPIWrapper";
 
-const parsedProjectData: ProjectData = yaml.load(projectData) as ProjectData;
+class MyProjectDataWrapper implements ProjectDataWrapper {
+    parsedProjectData: firebase.firestore.DocumentData | null;
 
-const generalPath = (id: number): string => {
-    return parsedProjectData.projectPrefix+id+parsedProjectData.projectSuffix+".";
+    constructor(data: firebase.firestore.DocumentData | null) {
+        this.parsedProjectData = data as CleanDataReturnType;
+    }
+
+    dataIsNull(){
+        return this.parsedProjectData == null;
+    }
+
+    getImagePath(id: number): string {
+
+        if(!this.parsedProjectData) return "";
+
+        return (this.parsedProjectData as CleanDataReturnType).repositories[id].previewImage;
+    }
+
+    getGifPath(id: number): string {
+        if(!this.parsedProjectData) return "";
+
+        return (this.parsedProjectData as CleanDataReturnType).repositories[id].previewGif;
+    }
+
+    getProjectName(id: number): string {
+        if(!this.parsedProjectData) return "";
+
+        return (this.parsedProjectData as CleanDataReturnType).repositories[id].name;
+    }
+
+    getProjectDescription(id: number): string {
+        if(!this.parsedProjectData) return "";
+
+        return (this.parsedProjectData as CleanDataReturnType).repositories[id].description;
+    }
+
+    numberOfProjects(): number {
+        if(!this.parsedProjectData) return 0;
+
+        return (this.parsedProjectData as CleanDataReturnType).repositories.length;
+    }
 }
-const imagePath = (id: number): string => {
-    return generalPath(id)+parsedProjectData.imageType;
-}
-
-const animPath = (id: number): string => {
-    return generalPath(id)+parsedProjectData.animType;
-}
-
-const MyProjectDataWrapper: ProjectDataWrapper = {
-    getImagePath: (id: number): string => imagePath(id),
-    getGifPath: (id: number): string => animPath(id),
-    getProjectDescription: (id: number): string => parsedProjectData.projects[id] || "Description not found",
-    numberOfProjects: (): number => Object.keys(parsedProjectData.projects).length
-};
 
 export default MyProjectDataWrapper;

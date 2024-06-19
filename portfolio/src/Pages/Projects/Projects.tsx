@@ -9,7 +9,9 @@ function Projects() {
         const fetchElement = async () => {
             try {
                 const projectCardListElement = await ElementFactory.CreateProjectCardListElement();
-                setProjectsContent(projectCardListElement);
+
+                if(projectCardListElement) setProjectsContent(projectCardListElement);
+
             } catch (err) {
                 if(err instanceof AppError) {
                     console.error(err.message);

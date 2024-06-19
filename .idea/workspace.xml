@@ -7,8 +7,10 @@
     <list default="true" id="a5a93d6b-bdca-4fab-a858-2ffa6e19d68c" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/portfolio/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/src/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/portfolio/src/Wrappers/FirebaseWrapper/FirebaseWrapper.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/src/Wrappers/FirebaseWrapper/FirebaseWrapper.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portfolio/src/Factories/ElementFactory.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/src/Factories/ElementFactory.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/portfolio/src/Wrappers/GithubAPIWrapper/GithubAPIWrapper.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/src/Wrappers/GithubAPIWrapper/GithubAPIWrapper.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portfolio/src/components/ProjectCard/ProjectCard.css" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/src/components/ProjectCard/ProjectCard.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portfolio/src/components/ProjectCard/ProjectCard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/src/components/ProjectCard/ProjectCard.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,7 +53,7 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;PF-28-Connect-Project-Data-Wrapper-To-Firbase-Wrapper&quot;,
     &quot;last_opened_file_path&quot;: &quot;C:/Users/Nick/Documents/WebStormProjects/portfolio/portfolio/src/Errors&quot;,
     &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
@@ -131,21 +133,26 @@
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/portfolio/src/Wrappers/FirebaseWrapper/FirebaseWrapper.tsx</url>
           <line>34</line>
-          <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="35" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/portfolio/src/Wrappers/FirebaseWrapper/FirebaseWrapper.tsx</url>
-          <line>24</line>
+          <url>file://$PROJECT_DIR$/portfolio/src/Wrappers/GithubAPIWrapper/GithubAPIWrapper.tsx</url>
+          <line>71</line>
           <properties lambdaOrdinal="-1" />
-          <option name="timeStamp" value="37" />
+          <option name="timeStamp" value="83" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/portfolio/src/Wrappers/GithubAPIWrapper/GithubAPIWrapper.tsx</url>
+          <line>22</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="84" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
     <watches-manager>
       <configuration name="JavascriptDebugType">
         <watch expression="data" />
-        <watch expression="data[&quot;0&quot;].private" />
+        <watch expression="data[&quot;0&quot;].private" language="TypeScript JSX" />
       </configuration>
     </watches-manager>
   </component>
