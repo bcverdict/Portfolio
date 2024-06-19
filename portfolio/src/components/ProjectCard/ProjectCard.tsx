@@ -1,5 +1,7 @@
 import React, {useState} from "react";
 import './ProjectCard.css';
+import ReactMarkdown from 'react-markdown';
+import remarkGfm from "remark-gfm";
 
 interface ProjectCardProps {
     id: number;
@@ -33,7 +35,9 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ id, name, description, gifPat
             <div className={"project-preview"}>
             </div>
             <div className={"project-description"}>
-                <p>{description}</p>
+                <ReactMarkdown remarkPlugins={[remarkGfm]}>
+                    {description}
+                </ReactMarkdown>
             </div>
         </div>
     );
